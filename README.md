@@ -1,13 +1,13 @@
 # Bonus Calculator App
 
-## Objectives
+## Objectives[x]
 
 - Practice Read, Write, Speak, Teach skills
 - Solidify JavaScript knowledge
 - Translate business needs to code
 - Practice Group Work
 
-# Group setup
+# Group setup [x]
 
 First, let's take a look at starting the project off with your group members in an effective manner:
 
@@ -15,11 +15,11 @@ First, let's take a look at starting the project off with your group members in 
 
 You are going to write a single JavaScript file to automatically calculate employee bonus for a company.
 
-## Data Structure
+## Data Structure [x]
 
 The company is providing you with a few samples of employee data of how their data is currently being stored. Each are stored in a global array named `employees`.
 
-### Employee Array
+### Employee Array [x]
 Each **Employee** currently is configured in this way:
 
 * The `name` property holds the employees name.
@@ -27,16 +27,22 @@ Each **Employee** currently is configured in this way:
 * The `annualSalary` property contains their base annual salary.
 * The `reviewRating` property contains their review rating.
 
-## Processing Employee Bonuses
+## Processing Employee Bonuses [x]
 
-Loop over the `employees` array and do the following:
+Loop over the `employees` array and do the following:           // need to make a for loop 
 
 * use each employee object as the input to the function described below.
-* `console.log` the results of each iteration.
+* `console.log` the results of each iteration.                  // console.log('')
 
 ## Function Logic
 
 Write a declared function that takes in one **Employee** object (as an argument to the function), and returns a new **object** with the following properties:
+
+^^^^
+// old info
+// function employeeInfo ( **employee object ** ) 
+// spit out new info
+
 
 * The `name` property should contain the employee's name.
 * The `bonusPercentage` property should contain the bonus percentage the employee is to receive. See section below for calculation instructions.

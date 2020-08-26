@@ -31,6 +31,8 @@ const employees = [
   }
 ];
 
+
+
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
 // Take small steps! Don't write a for loop and two functions that do all of the calculations right away.
@@ -40,4 +42,73 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
+/*{
+  name: 'Atticus',
+  employeeNumber: '2405',
+  annualSalary: '47000',
+  reviewRating: 3
+}*/
+/*
+[]function to pull out individual employee
+[]bonus calculation function to pass individual object (employee through)
+*/
 console.log( employees );
+let updateEmployee = [];
+
+function getEmployee(employeeNumber) {
+    for( let i=0; i < employees.length; i++) { // looping through whole array of objects. 
+      let employee = employees[i];
+      if(employees[i].employeeNumber === employeeNumber) {
+        return employee;
+    }
+  }
+}
+console.log(getEmployee('6243'));
+
+
+//function bonusCalculator
+
+/*
+function individualBonusCalculation (individualEmployee){
+  
+}
+------------------------------
+function reviewRatingBonus (){
+  if( individualEmployee.reviewRating <= 2 ){
+      return no bonus;
+  }
+  else if( individualEmployee.reviewRating === 3){
+    let bonus = individualEmployee.annualSalary * .04;
+  }
+  else if( individualEmployee.reviewRating === 4 ){
+    let bonus = individualEmployee.annualSalary * .06; 
+  }
+  else if( individualEmployee.reviewRating === 5 ){
+    let bonus = individualEmployee.annualSalary * .1;
+  }
+    return bonus;
+}
+------------------------------
+function emNumberBonus (){
+  if( individualEmployee.employeeNumber >= 1000 ){
+    let loyaltyBonus = individualEmployee.annualSalary * .05;
+    let bonusUpdate1 = loyaltyBonus + bonus;
+    return bonusUpdate1;
+  }
+  else {
+    return "At company less than 15 years"
+  }
+}
+function annualAdjustment(){
+  if( individualEmployee.annualSalary > 65000 ){
+    let bonusDecrease = bonusUpdate1 * .01
+    let adjustedBonus = bonusUpdate1 - bonusDecrease
+    return bonusUpdate2
+  }
+  else{
+    return "No bonus decrease... Your bonus is " + bonusUpdate1
+  }
+}  
+  Max bonus % is 13% ... cannot be below 0%
+  ------------------------------
+*/

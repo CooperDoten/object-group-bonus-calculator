@@ -74,27 +74,31 @@ console.log(getEmployee('6243'));
 
 
 function individualBonusCalculation (individualEmployee){
-  
+  reviewRatingBonus();
 }
-------------------------------
+
+
 function reviewRatingBonus (){
   if( individualEmployee.reviewRating <= 2 ){
-      return no bonus;
+      return employee.totalBonus = 0;
   }
   else if( individualEmployee.reviewRating === 3){
     let bonus = individualEmployee.annualSalary * .04;
     let bonusPercentage = .04;
+    return bonus + bonusPercentage;
   }
   else if( individualEmployee.reviewRating === 4 ){
     let bonus = individualEmployee.annualSalary * .06; 
     let bonusPercentage = .06;
+    return bonus + bonusPercentage;
   }
   else if( individualEmployee.reviewRating === 5 ){
     let bonus = individualEmployee.annualSalary * .1;
     let bonusPercentage = .1;
-  }
     return bonus + bonusPercentage;
+  }
 }
+console.log(' passing employee through bonus calc', individualBonusCalculation(getEmployee('6243')));
 /*
 ------------------------------
 function emNumberBonus (){

@@ -59,24 +59,20 @@ function getEmployee(employeeNumber) {
     for( let i=0; i < employees.length; i++) { // looping through whole array of objects. 
       let employee = employees[i];
       if(employees[i].employeeNumber === employeeNumber) {
+        employee.bonusPercentage = 0;
+        employee.totalCompensation = 0;
+        employee.totalBonus = 0;
         return employee;
     }
   }
 }
 console.log(getEmployee('6243'));
 
-/*
-function updateInfo(employee) {
-  employee.bonusPercentage = 0;
-  employee.totalCompensation = 0;
-  employee.totalBonus = 0;
-}
-console.log(updateInfo(getEmployee('6243')));
-*/
+
 
 //property totalCompensation = annualSalary + bonusUpdate2
 
-/*
+
 function individualBonusCalculation (individualEmployee){
   
 }
@@ -87,15 +83,19 @@ function reviewRatingBonus (){
   }
   else if( individualEmployee.reviewRating === 3){
     let bonus = individualEmployee.annualSalary * .04;
+    let bonusPercentage = .04;
   }
   else if( individualEmployee.reviewRating === 4 ){
     let bonus = individualEmployee.annualSalary * .06; 
+    let bonusPercentage = .06;
   }
   else if( individualEmployee.reviewRating === 5 ){
     let bonus = individualEmployee.annualSalary * .1;
+    let bonusPercentage = .1;
   }
-    return bonus;
+    return bonus + bonusPercentage;
 }
+/*
 ------------------------------
 function emNumberBonus (){
   if( individualEmployee.employeeNumber >= 1000 ){

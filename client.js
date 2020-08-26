@@ -74,11 +74,11 @@ console.log(getEmployee('6243'));
 
 
 function individualBonusCalculation (individualEmployee){
-  reviewRatingBonus();
+  reviewRatingBonus(individualEmployee);
 }
 
 
-function reviewRatingBonus (){
+function reviewRatingBonus (individualEmployee){
   if( individualEmployee.reviewRating <= 2 ){
       return employee.totalBonus = 0;
   }

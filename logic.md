@@ -1,3 +1,9 @@
+[x] make loop
+[x] console.log each employee object
+[] write a function 
+
+
+
 if rating < 2 no bonus
 if rating = 3 .04 * base salary
 if rating - 4 .06 * base salary

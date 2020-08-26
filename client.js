@@ -42,63 +42,24 @@ const employees = [
 // This is not a race. Everyone on your team should understand what is happening.
 // Ask questions when you don't.
 
-/*{
-  name: 'Atticus',
-  employeeNumber: '2405',
-  annualSalary: '47000',
-  reviewRating: 3
-}*/
-/*
-[]function to pull out individual employee
-[]bonus calculation function to pass individual object (employee through)
-*/
 console.log( employees );
-let updateEmployee = [];
-
-function getEmployee(employeeNumber) {
-    for( let i=0; i < employees.length; i++) { // looping through whole array of objects. 
-      let employee = employees[i];
-      if(employees[i].employeeNumber === employeeNumber) {
-        employee.bonusPercentage = 0;
-        employee.totalCompensation = 0;
-        employee.totalBonus = 0;
-        return employee;
-    }
-  }
-}
-console.log(getEmployee('6243'));
-
-
-
-//property totalCompensation = annualSalary + bonusUpdate2
-
-
-function individualBonusCalculation (individualEmployee){
-  reviewRatingBonus(individualEmployee);
+for (let employee of employees) {
+  console.log(employee);
+  let result = bonusCalculation(employee);
 }
 
-
-function reviewRatingBonus (individualEmployee){
-  if( individualEmployee.reviewRating <= 2 ){
-      return employee.totalBonus = 0;
+function bonusCalculation(employee) {
+  let bonus;
+  if (employee.reviewRating <= 2) {
+    bonus = 0;
+    console.log('this employee is underachieving', bonus, employee.name);
   }
-  else if( individualEmployee.reviewRating === 3){
-    let bonus = individualEmployee.annualSalary * .04;
-    let bonusPercentage = .04;
-    return bonus + bonusPercentage;
-  }
-  else if( individualEmployee.reviewRating === 4 ){
-    let bonus = individualEmployee.annualSalary * .06; 
-    let bonusPercentage = .06;
-    return bonus + bonusPercentage;
-  }
-  else if( individualEmployee.reviewRating === 5 ){
-    let bonus = individualEmployee.annualSalary * .1;
-    let bonusPercentage = .1;
-    return bonus + bonusPercentage;
+ else if (employee.reviewRating = 3) {
+    bonus = 4;
+    console.log("bonus should be 4", bonus, employee.name);
   }
 }
-console.log(' passing employee through bonus calc', individualBonusCalculation(getEmployee('6243')));
+
 /*
 ------------------------------
 function emNumberBonus (){

@@ -19,13 +19,7 @@ You are going to write a single JavaScript file to automatically calculate emplo
 
 The company is providing you with a few samples of employee data of how their data is currently being stored. Each are stored in a global array named `employees`.
 
-### Employee Array [x]
-Each **Employee** currently is configured in this way:
 
-* The `name` property holds the employees name.
-* The `employeeNumber` property has their employee number.
-* The `annualSalary` property contains their base annual salary.
-* The `reviewRating` property contains their review rating.
 
 ## Processing Employee Bonuses [x]
 
@@ -43,6 +37,15 @@ Write a declared function that takes in one **Employee** object (as an argument 
 // function employeeInfo ( **employee object ** ) 
 // spit out new info
 
+### Employee Array [x]
+Each **Employee** currently is configured in this way:
+
+* The `name` property holds the employees name.
+* The `employeeNumber` property has their employee number.
+* The `annualSalary` property contains their base annual salary.
+* The `reviewRating` property contains their review rating.
+
+------------------------------------
 
 * The `name` property should contain the employee's name.
 * The `bonusPercentage` property should contain the bonus percentage the employee is to receive. See section below for calculation instructions.

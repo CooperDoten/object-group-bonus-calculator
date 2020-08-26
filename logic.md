@@ -5,3 +5,11 @@ if rating = 5 .1 * base salary
 
 if base salary > 65000 bonus val * .9
 bonus !< .13
+
+updateInfo()
+
+function updateInfo(employee) {
+    employee.bonusPercentage;
+    employee.totalCompensation;
+    employee.totalBonus;
+}

@@ -65,8 +65,16 @@ function getEmployee(employeeNumber) {
 }
 console.log(getEmployee('6243'));
 
+/*
+function updateInfo(employee) {
+  employee.bonusPercentage = 0;
+  employee.totalCompensation = 0;
+  employee.totalBonus = 0;
+}
+console.log(updateInfo(getEmployee('6243')));
+*/
 
-//function bonusCalculator
+//property totalCompensation = annualSalary + bonusUpdate2
 
 /*
 function individualBonusCalculation (individualEmployee){
@@ -108,7 +116,9 @@ function annualAdjustment(){
   else{
     return "No bonus decrease... Your bonus is " + bonusUpdate1
   }
-}  
+} 
+  let maxBonus = annualSalary * .13 
   Max bonus % is 13% ... cannot be below 0%
+  
   ------------------------------
 */

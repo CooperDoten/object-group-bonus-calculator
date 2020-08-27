@@ -50,34 +50,45 @@ for (let employee of employees) {
 }
 
 function bonusCalculation(employee) {
-  let bonus;
+  let bonusPercentage;
   if (employee.reviewRating <= 2) {
-    bonus = 0;
+    bonusPercentage = 0;
   }
  else if (employee.reviewRating === 3) {
-    bonus = 4;
+    bonusPercentage = 4;
   }
   else if (employee.reviewRating === 4) {
-    bonus = 6;
+    bonusPercentage = 6;
   }
   else if (employee.reviewRating === 5) {
-    bonus = 6;
+    bonusPercentage = 10;
   }
   else {
     console.log("somethings wrong, I can feel it", employee.name);
   }
   if (employee.employeeNumber.length === 4) {
-    bonus += 5;
-    console.log('seniority has its perks for', employee.name, 'bonus:', bonus)
+    bonusPercentage += 5;
+    console.log('seniority has its perks for', employee.name, 'bonus:', bonusPercentage)
   }
   if (employee.annualSalary > 65000) {
-    bonus -= 1;
+    bonusPercentage -= 1;
   }
-  console.log("bonus based on rating", employee.reviewRating, 'bonus:', bonus, employee.name);
+  if (bonusPercentage > 13) {
+    bonusPercentage = 13;
+  }
+  if (bonusPercentage < 0) {
+    bonusPercentage = 0;
+  }
+  let totalBonus = employee.annualSalary * (bonusPercentage / 100);
+  let totalCompensation = Number(employee.annualSalary) + totalBonus;
+  console.log(totalBonus);
+  console.log(totalCompensation);
+  console.log("bonus based on rating", employee.reviewRating, 'bonus:', bonusPercentage, employee.name);
   return {
-    name: null,
-    bonusPercentage: null,
-    totalCompensation: null,
-    totalBonus: null,
+    name: employee.name,
+    bonusPercentage: bonusPercentage,
+    totalCompensation: totalCompensation,
+    totalBonus: totalBonus,
   }
 }
+

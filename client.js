@@ -68,12 +68,12 @@ function bonusCalculation(employee) {
   }
   if (employee.employeeNumber.length === 4) {
     bonus += 5;
-    console.log('seniority has its perks for', employee.name, bonus)
+    console.log('seniority has its perks for', employee.name, 'bonus:', bonus)
   }
   if (employee.annualSalary > 65000) {
-    bonus - 1;
+    bonus -= 1;
   }
-  console.log("bonus based on rating", employee.reviewRating, bonus, employee.name);
+  console.log("bonus based on rating", employee.reviewRating, 'bonus:', bonus, employee.name);
   return {
     name: null,
     bonusPercentage: null,

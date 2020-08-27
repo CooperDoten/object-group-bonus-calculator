@@ -46,44 +46,38 @@ console.log( employees );
 for (let employee of employees) {
   console.log(employee);
   let result = bonusCalculation(employee);
+  console.log(result);
 }
 
 function bonusCalculation(employee) {
   let bonus;
   if (employee.reviewRating <= 2) {
     bonus = 0;
-    console.log('this employee is underachieving', bonus, employee.name);
   }
- else if (employee.reviewRating = 3) {
+ else if (employee.reviewRating === 3) {
     bonus = 4;
-    console.log("bonus should be 4", bonus, employee.name);
   }
-}
-
-/*
-------------------------------
-function emNumberBonus (){
-  if( individualEmployee.employeeNumber >= 1000 ){
-    let loyaltyBonus = individualEmployee.annualSalary * .05;
-    let bonusUpdate1 = loyaltyBonus + bonus;
-    return bonusUpdate1;
+  else if (employee.reviewRating === 4) {
+    bonus = 6;
+  }
+  else if (employee.reviewRating === 5) {
+    bonus = 6;
   }
   else {
-    return "At company less than 15 years"
+    console.log("somethings wrong, I can feel it", employee.name);
+  }
+  if (employee.employeeNumber.length === 4) {
+    bonus += 5;
+    console.log('seniority has its perks for', employee.name, bonus)
+  }
+  if (employee.annualSalary > 65000) {
+    bonus - 1;
+  }
+  console.log("bonus based on rating", employee.reviewRating, bonus, employee.name);
+  return {
+    name: null,
+    bonusPercentage: null,
+    totalCompensation: null,
+    totalBonus: null,
   }
 }
-function annualAdjustment(){
-  if( individualEmployee.annualSalary > 65000 ){
-    let bonusDecrease = bonusUpdate1 * .01
-    let adjustedBonus = bonusUpdate1 - bonusDecrease
-    return bonusUpdate2
-  }
-  else{
-    return "No bonus decrease... Your bonus is " + bonusUpdate1
-  }
-} 
-  let maxBonus = annualSalary * .13 
-  Max bonus % is 13% ... cannot be below 0%
-  
-  ------------------------------
-*/
